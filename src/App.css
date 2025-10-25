@@ -2,6 +2,17 @@
    MIDNIGHT LUXE THEME — DARK & GOLD
    ========================================================= */
 
+/* Global Background for Midnight Luxe Theme */
+body, html {
+  background: var(--bg) !important;
+  color: #e2e8f0; /* default text color */
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
