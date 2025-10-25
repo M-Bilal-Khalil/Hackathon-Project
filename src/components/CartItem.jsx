@@ -2,9 +2,9 @@ import React from "react";
 
 export default function CartItem({ item, onInc, onDec, onDelete }) {
   return (
-    <div className="cart-item d-flex align-items-center mb-3 p-3 rounded-4">
+    <div className="cart-item d-flex mb-3 p-3 rounded-4">
       {/* Image */}
-      <div className="cart-img me-3">
+      <div className="cart-img me-3 flex-shrink-0">
         <img
           src={item.image}
           alt={item.title}
@@ -14,8 +14,13 @@ export default function CartItem({ item, onInc, onDec, onDelete }) {
       </div>
 
       {/* Info */}
-      <div className="flex-grow-1">
-        <h6 className="cart-item-title mb-1 text-truncate">{item.title}</h6>
+      <div className="flex-grow-1 me-3">
+        <h6
+          className="cart-item-title mb-1 text-truncate"
+          title={item.title}
+        >
+          {item.title}
+        </h6>
         <p className="cart-item-price mb-2">${item.price.toFixed(2)}</p>
 
         {/* Quantity Controls */}
@@ -32,7 +37,7 @@ export default function CartItem({ item, onInc, onDec, onDelete }) {
 
       {/* Delete */}
       <button
-        className="delete-btn ms-3"
+        className="delete-btn"
         onClick={() => onDelete(item.id)}
         title="Remove item"
       >

@@ -31,54 +31,56 @@ export default function Cart() {
 
   return (
     <section className="cart-page container py-5">
-      {/* Title */}
-      <div className="text-center mb-5">
-        <h2 className="cart-title fw-bold">
-          <span className="text-gold">Your</span> Cart
-        </h2>
-        <p className="textsmall">
-          Review your selected items before checkout.
-        </p>
-      </div>
+  <div className="text-center mb-5">
+    <h2 className="cart-title fw-bold">
+      <span className="text-gold">Your</span> Cart
+    </h2>
+    <p className="textsmall">
+      Review your selected items before checkout.
+    </p>
+  </div>
 
-      <div className="row g-4">
-        {/* Cart Items */}
-        <div className="col-12 col-lg-8">
-          {cart.map(item => (
-            <CartItem
-              key={item.id}
-              item={item}
-              onInc={inc}
-              onDec={dec}
-              onDelete={removeFromCart}
-            />
-          ))}
+  <div className="row g-4">
+    {/* Cart Items */}
+    <div className="col-12 col-lg-8">
+      {cart.map(item => (
+        <CartItem
+          key={item.id}
+          item={item}
+          onInc={inc}
+          onDec={dec}
+          onDelete={removeFromCart}
+        />
+      ))}
+    </div>
+
+    {/* Order Summary */}
+    <aside className="col-12 col-lg-4">
+      <div className="summary-card p-4">
+        <h5 className="summary-title mb-4">
+          <span className="text-gold">Order Summary</span>
+        </h5>
+
+        <div className="d-flex justify-content-between mb-2">
+          <span>Items</span>
+          <span>{totalItems}</span>
         </div>
 
-        {/* Order Summary */}
-        <aside className="col-12 col-lg-4">
-          <div className="summary-card p-4">
-            <h5 className="summary-title mb-4"><span className="text-gold">Order Summary</span></h5>
+        <div className="d-flex justify-content-between fw-semibold mb-3">
+          <span>Total</span>
+          <span className="text-gold">${totalPrice.toFixed(2)}</span>
+        </div>
 
-            <div className="d-flex justify-content-between mb-2">
-              <span>Items</span>
-              <span>{totalItems}</span>
-            </div>
-
-            <div className="d-flex justify-content-between fw-semibold mb-3">
-              <span>Total</span>
-              <span className="text-gold">${totalPrice.toFixed(2)}</span>
-            </div>
-
-            <Link
-              to="/checkout"
-              className="btn btn-gold w-100 mt-3 fw-semibold py-2"
-            >
-              Proceed to Checkout
-            </Link>
-          </div>
-        </aside>
+        <Link
+          to="/checkout"
+          className="btn btn-gold w-100 mt-3 fw-semibold py-2"
+        >
+          Proceed to Checkout
+        </Link>
       </div>
-    </section>
+    </aside>
+  </div>
+</section>
+
   );
 }
