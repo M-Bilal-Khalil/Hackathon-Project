@@ -1111,3 +1111,78 @@ body, html {
 .filters-section .form-select {
   color: #333; /* Darker for input value, not too heavy */
 }
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #444;
+  flex-wrap: wrap; /* important for small screens */
+}
+
+.cart-item-info {
+  flex: 1 1 auto;       /* allows it to grow and shrink */
+  min-width: 0;          /* required for ellipsis to work */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cart-item-title {
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* long titles show dots */
+}
+
+.cart-item-price {
+  color: #FFD700;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0; /* prevent controls from shrinking */
+}
+
+.cart-item-controls button {
+  border: none;
+  background: transparent;
+  color: #FFD700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cart-item-delete {
+  color: #FF4C4C;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .cart-item {
+    flex-direction: row; /* still row but allows wrap */
+    align-items: center;
+  }
+
+  .cart-item-info {
+    margin-right: auto;
+    max-width: 70%; /* ensures title doesn't overflow */
+  }
+
+  .cart-item-controls {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cart-item-delete {
+    order: 1; /* move X icon to end */
+  }
+}
