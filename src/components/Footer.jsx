@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand / About */}
           <div className="col-12 col-md-4">
             <h4 className="fw-bold mb-3 brand-text">
-              <span className="text-gold">ShopMini</span> Luxe
+              <span className="text-gold">Nexora</span>
             </h4>
             <p className="footer-desc">
               Discover premium products, crafted with elegance. Experience
@@ -43,8 +43,8 @@ export default function Footer() {
           <div className="col-6 col-md-4">
             <h6 className="footer-heading">Contact</h6>
             <ul className="list-unstyled footer-contact">
-              <li>Email: support@shopminiluxe.com</li>
-              <li>Phone: +92 300 1234567</li>
+              <li>Email: im.bilalkhalil@gmail.com</li>
+              <li>Phone: +92 333 5407020</li>
               <li>Address: Peshawar, Pakistan</li>
             </ul>
           </div>
@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
         <div className="container text-center">
-          © {new Date().getFullYear()} ShopMini Luxe — All rights reserved.
+          © {new Date().getFullYear()} Nexora — All rights reserved.
         </div>
     </footer>
   );
