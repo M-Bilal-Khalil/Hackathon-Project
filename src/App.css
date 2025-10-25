@@ -1,0 +1,983 @@
+/* =========================================================
+   MIDNIGHT LUXE THEME — DARK & GOLD
+   ========================================================= */
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---- Header ---- */
+header {
+  background: #1e293b;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header a {
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+header a:hover,
+header a.active {
+  color: var(--primary) !important;
+}
+
+/* ---- Hero Section ---- */
+.hero-section {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: var(--text-dark);
+  border-radius: var(--radius);
+  padding: 5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(251,191,36,0.15), transparent 60%);
+}
+.hero-section h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.hero-section p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+.hero-section .btn-primary {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.7rem 1.75rem;
+  transition: all 0.25s ease;
+}
+.hero-section .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(251,191,36,0.25);
+}
+
+/* ---- Product Cards ---- */
+.prod-card {
+  border: none;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+.prod-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(251,191,36,0.15);
+}
+.prod-img {
+  height: 210px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.prod-img img {
+  max-height: 85%;
+  transition: transform 0.3s ease;
+}
+.prod-card:hover .prod-img img {
+  transform: scale(1.05);
+}
+.card-body h6 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+.card-body p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.card-body .fw-bold {
+  color: var(--primary);
+}
+
+/* ---- Featured Section ---- */
+#featured {
+  margin-top: 4rem;
+}
+#featured h3 {
+  font-weight: 600;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(251,191,36,0.25);
+}
+
+/* ---- Cart ---- */
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #0f172a;
+  object-fit: contain;
+  padding: 5px;
+}
+.cart-summary-card {
+  border: none;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--shadow-soft);
+  color: var(--text-dark);
+}
+
+/* ---- Checkout Form ---- */
+form .form-control {
+  border-radius: 0.6rem;
+  border-color: #334155;
+  background: #0f172a;
+  color: var(--text-dark);
+}
+form .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.15rem rgba(251,191,36,0.15);
+}
+label {
+  color: var(--text-muted);
+}
+
+/* ---- Footer ---- */
+footer {
+  background: #1e293b;
+  border-top: 1px solid #334155;
+  padding: 1rem 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ---- Loader ---- */
+.centered-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+/* ---- Transitions ---- */
+a, button { transition: all 0.2s ease; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero-section { padding: 3rem 1.5rem; }
+  .hero-section h1 { font-size: 2rem; }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE HEADER DESIGN
+   ========================================================= */
+
+.luxe-header {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand .text-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+
+/* --- Cart badge --- */
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -12px;
+  background: var(--primary);
+  color: #0f172a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  box-shadow: 0 0 6px rgba(251, 191, 36, 0.4);
+}
+
+/* --- Navbar toggler --- */
+.navbar-toggler {
+  color: var(--primary);
+  border-color: transparent !important;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(251,191,36,0.3);
+}
+
+/* --- Mobile adjustments --- */
+@media (max-width: 992px) {
+  .navbar-nav {
+    background: #1e293b;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — FINAL PRODUCT CARD STYLE
+   ========================================================= */
+
+.prod-card {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.05);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.prod-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 12px 30px rgba(251, 191, 36, 0.15);
+}
+
+/* --- Image area --- */
+.prod-img {
+  height: 220px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.05);
+}
+
+.prod-img img {
+  max-height: 90%;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  transition: transform 0.35s ease, filter 0.3s ease;
+}
+
+.prod-card:hover .prod-img img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 16px rgba(251, 191, 36, 0.3));
+}
+
+/* --- Card Body --- */
+.card-body {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(251, 191, 36, 0.05);
+}
+
+.product-title {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.product-category {
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.product-price {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* --- Button --- */
+.btn-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.35);
+}
+
+/* --- Glow Overlay --- */
+.prod-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: radial-gradient(
+    circle at 70% 20%,
+    rgba(251, 191, 36, 0.07),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.prod-card:hover::after {
+  opacity: 1;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .prod-img {
+    height: 180px;
+  }
+  .product-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — ADD TO CART BUTTON GLOW ANIMATION
+   ========================================================= */
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.35);
+}
+
+/* --- Flash Animation Keyframes --- */
+@keyframes goldFlash {
+  0% {
+    box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+    transform: scale(1);
+  }
+  30% {
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.7);
+    transform: scale(1.08);
+  }
+  60% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+    transform: scale(1.03);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+    transform: scale(1);
+  }
+}
+
+/* --- Apply Flash Effect --- */
+.btn-gold-flash {
+  animation: goldFlash 0.6s ease-in-out;
+}
+
+/* --- Optional ripple-like shine --- */
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(251, 191, 36, 0.3),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.btn-gold:hover::after {
+  animation: shine 1s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — PROFESSIONAL FOOTER (BRIGHT TEXT FIX)
+   ========================================================= */
+
+.footer-dark {
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: #e2e8f0; /* bright gray-white text */
+  border-top: 1px solid rgba(251, 191, 36, 0.08);
+  padding-top: 3rem;
+  margin-top: 5rem;
+  position: relative;
+}
+
+/* --- Brand section --- */
+.brand-text {
+  color: #f8fafc;
+  letter-spacing: 0.4px;
+  font-size: 1.5rem;
+}
+
+.text-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Quick links --- */
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: var(--text-muted); /* light gray for readability */
+  font-weight: 500;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+}
+
+/* --- Section headings (Quick Links, Contact) --- */
+.footer-dark h6 {
+  color: #facc15; /* subtle gold tone */
+  letter-spacing: 0.5px;
+}
+
+/* --- Contact info --- */
+.footer-dark ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-dark li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+/* --- Bottom bar --- */
+.footer-bottom {
+  border-top: 1px solid rgba(251, 191, 36, 0.1);
+  background: #0f172a;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.footer-bottom .container {
+  color: #cbd5e1;
+}
+
+/* --- Gold gradient top line --- */
+.footer-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  opacity: 0.5;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+  .footer-dark {
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — NAV LINK UNDERLINE EFFECT
+   ========================================================= */
+
+.nav-link {
+  color: #e2e8f0 !important; /* light gray text */
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+/* Underline (hidden by default) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  transition: width 0.35s ease;
+  border-radius: 2px;
+}
+
+/* Show underline on hover */
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link underline stays visible */
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Color glow on hover */
+.nav-link:hover {
+  color: var(--primary) !important;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+
+/* Optional small pulse on click */
+.nav-link:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — CART PAGE SUPREME EDITION
+   ========================================================= */
+
+/* Page */
+.cart-page {
+  background: radial-gradient(circle at 10% 20%, #0f172a, #1e293b 80%);
+  color: #e2e8f0;
+  min-height: 80vh;
+  border-radius: 14px;
+}
+
+/* Title */
+.cart-title {
+  color: #f8fafc;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.cart-title::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  border-radius: 2px;
+}
+
+/* Summary Card */
+.summary-card {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(251, 191, 36, 0.15);
+}
+
+/* Summary Title */
+.summary-title {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+/* Button (Gold) */
+.btn-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.45);
+}
+
+/* Empty Cart */
+.empty-cart {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 14px;
+  padding: 3rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.empty-cart h2 {
+  color: #f8fafc;
+}
+.empty-cart .text-gold {
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-title {
+    font-size: 1.6rem;
+  }
+  .summary-card {
+    margin-top: 1rem;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — CART ITEM STYLE
+   ========================================================= */
+
+.cart-item {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  color: #e2e8f0;
+}
+
+.cart-item:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.15);
+  transform: translateY(-3px);
+}
+
+/* Image box */
+.cart-img {
+  width: 80px;
+  height: 80px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.08);
+  flex-shrink: 0;
+}
+.cart-img img {
+  max-height: 70px;
+  object-fit: contain;
+}
+
+/* Item text */
+.cart-item-title {
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.cart-item-price {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Quantity buttons */
+.qty-btn {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+.qty-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+.qty-value {
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #f87171; /* soft red */
+  transition: all 0.25s ease;
+}
+.delete-btn:hover {
+  color: #fb923c;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem;
+  }
+  .cart-img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1rem;
+  }
+  .delete-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — CHECKOUT PAGE
+   ========================================================= */
+
+.checkout-page {
+  background: radial-gradient(circle at 10% 20%, #0f172a, #1e293b 80%);
+  color: #e2e8f0;
+  min-height: 80vh;
+}
+
+/* Title */
+.checkout-title {
+  color: #f8fafc;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+.checkout-title::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  border-radius: 2px;
+}
+
+/* Form */
+.checkout-form {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.checkout-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(251, 191, 36, 0.15);
+}
+.form-heading {
+  color: var(--primary);
+  font-weight: 600;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+/* Inputs */
+.luxe-input {
+  background: #0f172a !important;
+  border: 1px solid rgba(251, 191, 36, 0.1);
+  color: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.luxe-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.3);
+  outline: none;
+}
+
+/* Order Summary */
+.checkout-summary {
+  background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  color: #e5e7eb;
+}
+.summary-heading {
+  color: var(--primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(251, 191, 36, 0.1);
+  padding-bottom: 0.5rem;
+}
+.checkout-summary li {
+  border-bottom: 1px dashed rgba(251, 191, 36, 0.1);
+  padding-bottom: 0.4rem;
+}
+
+/* Button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border: none;
+  color: #0f172a;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.45);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-title {
+    font-size: 1.6rem;
+  }
+  .checkout-form,
+  .checkout-summary {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================================================
+   MIDNIGHT LUXE — FILTERS SECTION
+   ========================================================= */
+
+.filters-section {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(251, 191, 36, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.filters-title {
+  color: #f8fafc;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.filters-sub {
+  color: #cbd5e1;
+  margin-top: 0.3rem;
+}
+
+/* Form controls */
+.luxe-field {
+  background: #0f172a !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(251, 191, 36, 0.12);
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  font-size: 0.9rem;
+  min-width: 180px;
+}
+
+.luxe-field:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.25);
+  outline: none;
+  background: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+.luxe-field option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Range input */
+.luxe-range {
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.luxe-range::-webkit-slider-thumb {
+  background: var(--primary);
+  border: 2px solid #0f172a;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.luxe-range::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, rgba(251,191,36,0.4), rgba(251,191,36,0.1));
+  height: 4px;
+  border-radius: 4px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .filters-section {
+    padding: 1.25rem;
+  }
+  .filters-controls {
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .luxe-field {
+    width: 100%;
+  }
+}
