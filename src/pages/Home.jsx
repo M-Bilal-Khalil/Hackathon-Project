@@ -65,59 +65,58 @@ export default function Home() {
       {/* ===== Full Shop Section ===== */}
       <section className="mt-5">
         <div className="filters-section d-flex flex-column flex-md-row justify-content-between align-items-start gap-4 mb-5">
-  <div>
-    <h3 className="filters-title mb-0 text-gold">All Products</h3>
-    <p className="filters-sub text-muted small">
-      Browse and filter products below.
-    </p>
-  </div>
+          <div>
+            <h3 className="filters-title mb-0">All Products</h3>
+            <p className="filters-sub small">
+              Browse and filter products below.
+            </p>
+          </div>
 
-  <div className="filters-controls d-flex flex-column flex-md-row gap-3 align-items-md-end">
-    {/* Search */}
-    <div className="form-group">
-      <label className="form-label small mb-1 text-muted">Search</label>
-      <input
-        className="form-control luxe-field"
-        placeholder="Search title..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-    </div>
+          <div className="filters-controls d-flex flex-column flex-md-row gap-3 align-items-md-end">
+            {/* Search */}
+            <div className="form-group">
+              <label className="form-label small mb-1">Search</label>
+              <input
+                className="form-control luxe-field"
+                placeholder="Search title..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
 
-    {/* Category */}
-    <div className="form-group">
-      <label className="form-label small mb-1 text-muted">Category</label>
-      <select
-        className="form-select luxe-field"
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      >
-        <option value="all">All</option>
-        {cats.map((c) => (
-          <option key={c} value={c}>
-            {c}
-          </option>
-        ))}
-      </select>
-    </div>
+              {/* Category */}
+              <div className="form-group">
+                <label className="form-label small mb-1">Category</label>
+                <select
+                  className="form-select luxe-field"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option value="all">All</option>
+                  {cats.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-    {/* Price Range */}
-    <div className="form-group w-100 w-md-auto">
-      <label className="form-label small mb-1 text-muted">
-        Max Price: ${maxPrice}
-      </label>
-      <input
-        type="range"
-        min="0"
-        max={priceCap}
-        value={maxPrice}
-        onChange={(e) => setMaxPrice(Number(e.target.value))}
-        className="form-range luxe-range"
-      />
-    </div>
-  </div>
-</div>
-
+              {/* Price Range */}
+              <div className="form-group w-100 w-md-auto">
+                <label className="form-label small mb-1">
+                  Max Price: ${maxPrice}
+                </label>
+                <input
+                  type="range"
+                  min="0"
+                  max={priceCap}
+                  value={maxPrice}
+                  onChange={(e) => setMaxPrice(Number(e.target.value))}
+                  className="form-range luxe-range"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
 
         {filtered.length === 0 ? (
           <div className="text-center py-5 text-muted">
@@ -136,5 +135,3 @@ export default function Home() {
     </>
   );
 }
-
-

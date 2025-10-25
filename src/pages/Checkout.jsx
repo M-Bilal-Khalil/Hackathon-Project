@@ -26,23 +26,24 @@ export default function Checkout() {
   };
 
   return (
-    <section className="checkout-page container py-5">
-      <div className="text-center mb-5">
+    <section className="checkout-page container py-4">
+      {/* Title */}
+      <div className="text-center mb-4">
         <h2 className="checkout-title fw-bold">
           <span className="text-gold">Checkout</span> Details
         </h2>
-        <p className="textsmall">
-          Please fill in your information and confirm your order.
+        <p className="small text-muted">
+          Fill in your information and confirm your order.
         </p>
       </div>
 
-      <div className="row g-4">
+      <div className="row g-3">
         {/* Checkout Form */}
         <div className="col-12 col-lg-7">
-          <form className="checkout-form p-4 rounded-4" onSubmit={handleSubmit}>
-            <h5 className="form-heading mb-4">Billing Information</h5>
+          <form className="checkout-form p-3 p-lg-4 rounded-3" onSubmit={handleSubmit}>
+            <h5 className="form-heading mb-3">Billing Information</h5>
 
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Full Name</label>
               <input
                 type="text"
@@ -54,7 +55,7 @@ export default function Checkout() {
               />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Email</label>
               <input
                 type="email"
@@ -66,7 +67,7 @@ export default function Checkout() {
               />
             </div>
 
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Address</label>
               <input
                 type="text"
@@ -78,8 +79,8 @@ export default function Checkout() {
               />
             </div>
 
-            <div className="row">
-              <div className="col-6 mb-3">
+            <div className="row g-2">
+              <div className="col-6">
                 <label className="form-label">City</label>
                 <input
                   type="text"
@@ -90,8 +91,7 @@ export default function Checkout() {
                   required
                 />
               </div>
-
-              <div className="col-6 mb-3">
+              <div className="col-6">
                 <label className="form-label">ZIP Code</label>
                 <input
                   type="text"
@@ -104,7 +104,10 @@ export default function Checkout() {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-gold w-100 mt-3 py-2 fw-semibold">
+            <button
+              type="submit"
+              className="btn btn-gold w-100 mt-3 py-2 fw-semibold"
+            >
               Place Order
             </button>
           </form>
@@ -112,23 +115,30 @@ export default function Checkout() {
 
         {/* Order Summary */}
         <aside className="col-12 col-lg-5">
-          <div className="checkout-summary p-4 rounded-4">
-            <h5 className="summary-heading mb-4">Order Summary</h5>
+          <div className="checkout-summary p-3 p-lg-4 rounded-3">
+            <h5 className="summary-heading mb-3">Order Summary</h5>
             <ul className="list-unstyled mb-3">
               {cart.map((item) => (
                 <li
                   key={item.id}
                   className="d-flex justify-content-between align-items-center mb-2"
+                  style={{ gap: "10px" }}
                 >
-                  <span className="text-truncate small">{item.title}</span>
-                  <span className="text-gold fw-semibold">
-                    ${item.price.toFixed(2)} × {item.qty}
+                  <span
+                    className="text-truncate small flex-grow-1"
+                    style={{ maxWidth: "65%" }}
+                    title={item.title}
+                  >
+                    {item.title}
+                  </span>
+                  <span className="text-gold fw-semibold flex-shrink-0">
+                    {item.qty} × ${item.price.toFixed(2)}
                   </span>
                 </li>
               ))}
             </ul>
 
-            <div className="d-flex justify-content-between border-top pt-3 fw-bold">
+            <div className="d-flex justify-content-between border-top pt-2 fw-bold">
               <span>Total</span>
               <span className="text-gold">${totalPrice.toFixed(2)}</span>
             </div>

@@ -1088,3 +1088,26 @@ body, html {
 .delete-btn {
   flex-shrink: 0;
 }
+
+/* Filters Section Text */
+.filters-section .filters-title {
+  color: #FFD700; /* Gold color for heading */
+}
+
+.filters-section .filters-sub,
+.filters-section .form-label {
+  color: #aaa; /* Light gray for labels and subtext */
+}
+
+/* Optional: make placeholder text light gray */
+.filters-section .form-control::placeholder,
+.filters-section .form-select::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+/* Optional: lighten input/select text */
+.filters-section .form-control,
+.filters-section .form-select {
+  color: #333; /* Darker for input value, not too heavy */
+}
